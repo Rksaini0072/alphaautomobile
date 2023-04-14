@@ -1,10 +1,18 @@
 package com.example.demo;
 
 import com.alphaautomobile.beans.AutomobileServics;
-import com.alphaautomobile.impl.AutomobileServicesImpl;
+import com.alphaautomobile.services.impl.AutomobileServicesImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
+@EnableWebMvc
+@ComponentScan({"com.*"})
+@EnableJpaRepositories({"com.*"})
+@EntityScan("com.*")
 @SpringBootApplication
 public class DemoApplication {
 
@@ -29,14 +37,6 @@ public class DemoApplication {
 		automobileServicesimpl.addservic(automobileServics);
 		automobileServicesimpl.addservic(automobileServics1);
 		automobileServicesimpl.displayServices();
-		SpringApplication.run(DemoApplication.class, args);
-		SpringApplication.run(DemoApplication.class, args);
-		SpringApplication.run(DemoApplication.class, args);
-		SpringApplication.run(DemoApplication.class, args);
-		SpringApplication.run(DemoApplication.class, args);
-		SpringApplication.run(DemoApplication.class, args);
-		SpringApplication.run(DemoApplication.class, args);
-		SpringApplication.run(DemoApplication.class, args);
 		SpringApplication.run(DemoApplication.class, args);
 
 

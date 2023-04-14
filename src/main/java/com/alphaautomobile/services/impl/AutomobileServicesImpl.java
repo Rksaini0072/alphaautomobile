@@ -1,4 +1,4 @@
-package com.alphaautomobile.impl;
+package com.alphaautomobile.services.impl;
 
 import com.alphaautomobile.beans.AutomobileServics;
 import com.alphaautomobile.services.AutomobileServicController;
